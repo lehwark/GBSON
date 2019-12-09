@@ -9,7 +9,7 @@ export type GBSON = {
 		circular: boolean,
 		locus: string,
 		length: number,
-		datetime: DateTime,
+		datetime: string, // ISO_8601 
 		references?: Reference[],
 		definition?: string,
 		accession?: string,
@@ -142,11 +142,3 @@ export type FeatureType = "3'utr" | "5'utr" | "assembly_gap" | "cds" | "conflict
 	| "repeat_region" | "rrna" | "stem_loop" | "sts" | "telomere" | "tmrna" | "trna" | "variation";
 
 
-export type DateTime = {
-	year: number,
-	month: number,
-	day: number,
-	hour: number,
-	minute: number,
-	second?: number
-}
