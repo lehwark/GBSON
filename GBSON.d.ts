@@ -39,12 +39,15 @@ export type Range = [number, number] | { complement: Range } | { join: Range[] }
 
 // features and qualifiers according to http://www.insdc.org/documents/feature_table.html#7.2
 export type Feature = Feature_assemblygap | Feature_Cregion | Feature_CDS | Feature_centromere
-	| Feature_Dloop | Feature_Dsegment | Feature_exon | Feature_gap | Feature_gene | Feature_iDNA | Feature_intron | Feature_Jsegment | Feature_matpeptide
-	| Feature_miscbinding | Feature_miscdifference | Feature_miscfeature | Feature_miscrecomb | Feature_miscRNA | Feature_miscstructure | Feature_mobileelement
-	| Feature_modifiedbase | Feature_mRNA | Feature_ncRNA | Feature_Nregion | Feature_oldsequence | Feature_operon | Feature_oriT | Feature_polyAsite
-	| Feature_precursorRNA | Feature_primtranscript | Feature_primerbind | Feature_propeptide | Feature_proteinbind | Feature_regulatory | Feature_repeatregion
-	| Feature_reporigin | Feature_rRNA | Feature_Sregion | Feature_sigpeptide | Feature_source | Feature_stemloop | Feature_STS | Feature_telomere
-	| Feature_tmRNA | Feature_transitpeptide | Feature_tRNA | Feature_unsure | Feature_Vregion | Feature_Vsegment | Feature_variation | Feature_3UTR
+	| Feature_Dloop | Feature_Dsegment | Feature_exon | Feature_gap | Feature_gene | Feature_iDNA
+	| Feature_intron | Feature_Jsegment | Feature_matpeptide | Feature_miscbinding | Feature_miscdifference
+	| Feature_miscfeature | Feature_miscrecomb | Feature_miscRNA | Feature_miscstructure | Feature_mobileelement
+	| Feature_modifiedbase | Feature_mRNA | Feature_ncRNA | Feature_Nregion | Feature_oldsequence
+	| Feature_operon | Feature_oriT | Feature_polyAsite | Feature_precursorRNA | Feature_primtranscript
+	| Feature_primerbind | Feature_propeptide | Feature_proteinbind | Feature_regulatory
+	| Feature_repeatregion | Feature_reporigin | Feature_rRNA | Feature_Sregion | Feature_sigpeptide | Feature_source
+	| Feature_stemloop | Feature_STS | Feature_telomere | Feature_tmRNA | Feature_transitpeptide
+	| Feature_tRNA | Feature_unsure | Feature_Vregion | Feature_Vsegment | Feature_variation | Feature_3UTR
 	| Feature_5UTR;
 
 export interface BaseFeature {
