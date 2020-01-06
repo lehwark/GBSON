@@ -15,7 +15,11 @@ export type GBSON = {
 		accession?: string,
 		version?: string,
 		keywords?: string,
-		source?: string,
+		source: {
+			range: Range,
+			organism: string,
+			organelle?: string
+		},
 		organism?: string,
 		dblink?: string
 	},
