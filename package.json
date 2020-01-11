@@ -1,6 +1,6 @@
 {
   "name": "GBSON",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "File format definition used by the GeSeq annotation software to represent GenBank data as JSON.",
   "files": [
     "GBSON.d.ts"

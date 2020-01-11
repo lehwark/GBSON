@@ -15,18 +15,13 @@ export type GBSON = {
 		accession?: string,
 		version?: string,
 		keywords?: string,
-		source: {
-			range: Range,
-			organism: string,
-			organelle?: string
-		},
+		source: SourceDefinition,
 		organism?: string,
 		dblink?: string
 	},
 	features: Feature[],
 	origin: string
 }
-
 
 export type Reference = {
 	title: string,
@@ -40,6 +35,67 @@ export type Reference = {
 }
 
 export type Range = [number, number] | { complement: Range } | { join: Range[] };
+
+export interface SourceDefinition {
+	range: Range,
+	organism: string,
+	mol_type?: MolType,
+	bio_material?: string,
+	cell_line?: string,
+	cell_type?: string,
+	chromosome?: string,
+	citation?: string,
+	clone?: string,
+	clone_lib?: string,
+	collected_by?: string,
+	collection_date?: string,
+	country?: string,
+	cultivar?: string,
+	culture_collection?: string,
+	db_xref?: string,
+	dev_stage?: string,
+	ecotype?: string,
+	environmental_sample?: string,
+	focus?: string,
+	germline?: string,
+	haplogroup?: string,
+	haplotype?: string,
+	host?: string,
+	identified_by?: string,
+	isolate?: string,
+	isolation_source?: string,
+	lab_host?: string,
+	lat_lon?: string,
+	macronuclear?: string,
+	map?: string,
+	mating_type?: string,
+	metagenome_source?: string,
+	note?: string,
+	organelle?: string,
+	PCR_primers?: string,
+	plasmid?: string,
+	pop_variant?: string,
+	proviral?: string,
+	rearranged?: string,
+	segment?: string,
+	serotype?: string,
+	serovar?: string,
+	sex?: string,
+	specimen_voucher?: string,
+	strain?: string,
+	sub_clone?: string,
+	submitter_seqid?: string,
+	sub_species?: string,
+	sub_strain?: string,
+	tissue_lib?: string,
+	tissue_type?: string,
+	transgenic?: string,
+	type_material?: string,
+	variety?: string
+}
+
+export type MolType = "genomic DNA" | "genomic RNA" | "mRNA" | "tRNA" | "rRNA" | "other RNA" | "other DNA" | "transcribed RNA" | "viral cRNA" | "unassigned DNA" | "unassigned RNA";
+
 
 // features and qualifiers according to http://www.insdc.org/documents/feature_table.html#7.2
 export type Feature = Feature_assemblygap | Feature_Cregion | Feature_CDS | Feature_centromere
@@ -805,7 +861,7 @@ export interface Feature_source extends BaseFeature {
 	map?: string,
 	mating_type?: string,
 	metagenome_source?: string,
-	mol_type?: string,
+	mol_type?: MolType,
 	note?: string,
 	organelle?: string,
 	organism?: string,
@@ -1077,7 +1133,7 @@ export interface Feature_5UTR extends BaseFeature {
 	metagenome_source?: string,
 	mobile_element_type?: string,
 	mod_base?: string,
-	mol_type?: string,
+	mol_type?: MolType,
 	ncRNA_class?: string,
 	note?: string,
 	number?: string,
