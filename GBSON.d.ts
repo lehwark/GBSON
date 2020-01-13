@@ -39,7 +39,7 @@ export type Range = [number, number] | { complement: Range } | { join: Range[] }
 export interface SourceDefinition {
 	range: Range,
 	organism: string,
-	mol_type?: MolType,
+	mol_type: MolType,
 	bio_material?: string,
 	cell_line?: string,
 	cell_type?: string,
