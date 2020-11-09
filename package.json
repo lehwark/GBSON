@@ -1,11 +1,15 @@
 {
   "name": "GBSON",
-  "version": "1.0.5",
+  "type":"module",
+  "version": "1.0.6",
   "description": "File format definition used by the GeSeq annotation software to represent GenBank data as JSON.",
   "files": [
+    "index.js",
     "GBSON.d.ts"
   ],
-  "scripts": {},
+  "scripts": {
+    "builtnrun": "clear && tsc && node test.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lehwark/GBSON"
