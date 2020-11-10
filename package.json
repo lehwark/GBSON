@@ -3,6 +3,8 @@
   "type":"module",
   "version": "1.0.6",
   "description": "Parser for the popular GenBank file format including json format type definition (used by the GeSeq annotation software)",
+  "main":"index.js",
+  "types":"index.d.ts",
   "files": [
     "index.js",
     "GBSON.d.ts"
