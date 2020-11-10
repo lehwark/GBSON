@@ -1,8 +1,8 @@
 {
-  "name": "GBSON",
+  "name": "gbson",
   "type":"module",
   "version": "1.0.6",
-  "description": "File format definition used by the GeSeq annotation software to represent GenBank data as JSON.",
+  "description": "Parser for the popular GenBank file format including json format type definition (used by the GeSeq annotation software)",
   "files": [
     "index.js",
     "GBSON.d.ts"
