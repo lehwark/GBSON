@@ -34,7 +34,7 @@ export type Reference = {
 	authors?: string
 }
 
-export type Range = [number, number] | { complement: Range } | { join: Range[] };
+export type Range = [number, number] | { complement: Range } | { joined: Range[] };
 
 export interface SourceDefinition {
 	range: Range,

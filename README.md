@@ -31,7 +31,7 @@ complement(join(125294..125832,126877..127429))
 
 ### GBSON
 ```json
-{ "complement" : { "join" : [ [ 125294, 125832 ], [ 126877, 127429 ] ] } }
+{ "complement" : { "joined" : [ [ 125294, 125832 ], [ 126877, 127429 ] ] } }
 ```
 
 ## Nested Features

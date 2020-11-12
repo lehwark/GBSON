@@ -188,11 +188,11 @@ function rangeToJSONString(range: string): string {
 			}
 		}
 	}
-	let result = range.replace(new RegExp("join", "g"), "\"join\":");
+	let result = range.replace(new RegExp("join", "g"), "\"joined\":");
 	result = result.replace(new RegExp("complement", "g"), "\"complement\":");
 	result = result.replace(new RegExp("\\(", "g"), "{");
 	result = result.replace(new RegExp("\\)", "g"), "}");
-	if ((result.indexOf("join") !== -1 || result.indexOf("complement") !== -1) && !result.startsWith("{"))
+	if ((result.indexOf("joined") !== -1 || result.indexOf("complement") !== -1) && !result.startsWith("{"))
 		result = "{" + result + "}";
 	return result;
 }
@@ -426,7 +426,7 @@ function getEmptyGBSON(): GBSON {
 		meta: {
 			format: {
 				name: "GBSON",
-				version: "1.0.6",
+				version: "1.0.7",
 				url: "https://github.com/lehwark/GBSON/blob/master/GBSON.d.ts"
 			},
 			circular: false,
