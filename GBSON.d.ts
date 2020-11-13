@@ -113,6 +113,7 @@ export type Feature = Feature_assemblygap | Feature_Cregion | Feature_CDS | Feat
 export interface BaseFeature {
 	id: string,
 	type: string,
+	gene: string,
 	range: Range,
 	features?: Feature[],
 }
