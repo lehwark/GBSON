@@ -343,7 +343,7 @@ function preLoadGenBank(gb: string): {
 					line = line + lines[(++n)].replace(new RegExp("\n", "g"), "");
 				}
 				const range = line.substring(20).trim();
-				p = new Params(cmd.trim().toLowerCase());
+				p = new Params(cmd.trim());
 				p.set("range", range);
 			} else if (!line.startsWith("BASE COUNT")) {
 				console.error("could not parse cmd from genbank line '" + line + "'");

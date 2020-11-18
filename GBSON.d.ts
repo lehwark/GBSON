@@ -34,7 +34,12 @@ export type Reference = {
 	authors?: string
 }
 
-export type Range = [number, number] | { complement: Range } | { joined: Range[] };
+export type Range = SimpleRange | ComplementRange | JoinedRange;
+
+export type SimpleRange = [number, number];
+export type ComplementRange = { complement: Range };
+export type JoinedRange = { joined: Range[] };
+
 
 export interface SourceDefinition {
 	range: Range,
@@ -114,6 +119,7 @@ export interface BaseFeature {
 	id: string,
 	type: string,
 	gene: string,
+	trans_splicing?: string,
 	range: Range,
 	features?: Feature[],
 }
